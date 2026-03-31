@@ -4,6 +4,9 @@ A browser-based webcam app that estimates whether a person looks like they are l
 
 The app runs entirely in the browser for detection and exposes a small JSON API from the container so live results can be polled or scraped.
 
+## Demo link:
+https://laugh-detector.lak.nz/
+
 ## Features
 
 - Live webcam preview
