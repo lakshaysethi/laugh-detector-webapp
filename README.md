@@ -133,6 +133,10 @@ The browser must be open and camera detection must be running for the API to upd
 - The app uses face-expression and mouth-opening cues to estimate laughter.
 - The API state lives in memory inside the container and resets when the container restarts.
 
+## License
+
+MIT. See [`LICENSE`](LICENSE).
+
 ## Repository Structure
 
 ```text
