@@ -1,0 +1,5 @@
+services:
+  laugh-detector:
+    build: .
+    ports:
+      - "4173:4173"

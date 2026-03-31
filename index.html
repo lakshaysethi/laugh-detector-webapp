@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laugh Detector</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="https://unpkg.com/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Webcam expression check</p>
+          <h1>Laugh Detector</h1>
+          <p class="lede">
+            Uses your camera to estimate whether a face looks like it is laughing.
+            This is a visual heuristic, not a medical or biometric grade classifier.
+          </p>
+        </div>
+        <div class="status-card">
+          <div class="status-label">Current status</div>
+          <div id="status" class="status">Idle</div>
+          <div id="detail" class="detail">Camera is off.</div>
+        </div>
+      </section>
+
+      <section class="stage">
+        <div class="frame">
+          <video id="video" autoplay playsinline muted></video>
+          <canvas id="overlay"></canvas>
+          <div class="placeholder" id="placeholder">
+            <div class="placeholder-panel">
+              <h2>Enable your camera</h2>
+              <p>The app loads a face-expression model in your browser and checks for a laughing-looking face.</p>
+              <button id="startBtn" type="button">Start camera</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <span>Laugh score</span>
+            <strong id="laughScore">0%</strong>
+          </div>
+          <div class="metric">
+            <span>Happy score</span>
+            <strong id="happyScore">0%</strong>
+          </div>
+          <div class="metric">
+            <span>Mouth open</span>
+            <strong id="mouthScore">0%</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
